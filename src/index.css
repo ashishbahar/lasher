@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    font-family: "Fira Sans", sans-serif;
+}
+
+.container {
+    max-width: 1920px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+}
+
+.bg_img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./assets/images/jpg/home-banner.jpg);
+}
+
+.bg_news {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./assets/images/jpg/home-events-bg.jpg);
+}
+
+.solution_bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./assets/images/jpg/home-pa-banner.jpg);
+}
+
+.ff_play {
+    font-family: "Playfair Display", serif;
+}
+
+.line {
+    height: 4px;
+    width: 35px;
+    position: relative;
+    background-color: white !important;
+    transition: transform 0.3s ease;
+}
+
+.line::after,
+.line::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 35px;
+    background-color: white !important;
+    transition: transform 0.3s ease;
+}
+
+.line::after {
+    top: 10px;
+}
+
+.line::before {
+    bottom: 10px;
+}
+
+.spacing {
+    letter-spacing: 1px;
+}
+
+.spacing2 {
+    letter-spacing: 2px;
+}
+
+.open .line {
+    transform: rotate(45deg);
+}
+
+.open .line::after {
+    transform: rotate(-90deg) translateX(8px);
+}
+
+.open .line::before {
+    transform: rotate(90deg) translateX(9px);
+}
+
+.circle {
+    animation: circle 3000ms infinite linear alternate;
+}
+
+.footer_bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./assets/images/jpg/footer-bg.jpg);
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+@media (max-width : 650px) {
+    .line {
+        height: 4px;
+        width: 25px;
+        position: relative;
+        background-color: white !important;
+        transition: transform 0.3s ease;
+    }
+
+    .line::after,
+    .line::before {
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 25px;
+        background-color: white !important;
+        transition: transform 0.3s ease;
+    }
+}
